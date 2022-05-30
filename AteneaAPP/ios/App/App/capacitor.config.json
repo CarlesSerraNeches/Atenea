@@ -1,0 +1,6 @@
+{
+	"appId": "com.hotelgest.companionhg",
+	"appName": "AteneaAPP",
+	"webDir": "build",
+	"bundledWebRuntime": false
+}

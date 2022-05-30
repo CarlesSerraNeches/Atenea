@@ -1,0 +1,7 @@
+{
+  "name": "AteneaAPP",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
