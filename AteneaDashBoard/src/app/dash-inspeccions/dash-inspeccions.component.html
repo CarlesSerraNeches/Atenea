@@ -1,0 +1,28 @@
+<div class="grid-container">
+  <h1 class="mat-h1">Accions del Manteniment Correciu</h1>
+  <mat-grid-list cols="4" rowHeight="200px">
+
+    <mat-grid-tile [colspan]="2" [rowspan]="3">
+      <app-card title="Total d'inspeccions / Any">
+          <app-polar-one></app-polar-one>
+      </app-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]="2" [rowspan]="6">
+      <app-card title="Total Intervencions / Estat">
+          <app-line-one></app-line-one>
+      </app-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]="2" [rowspan]="3">
+      <app-card title="Total Inspeccions Estat / Any">
+          <app-radar-one></app-radar-one>
+      </app-card>
+    </mat-grid-tile>
+
+
+
+  </mat-grid-list>
+
+  
+</div>

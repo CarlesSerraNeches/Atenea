@@ -1,0 +1,47 @@
+<div class="grid-container">
+  <h1 class="mat-h1">Accions del Manteniment Correciu</h1>
+  <mat-grid-list cols="4" rowHeight="200px">
+      
+    <!--Mini Cards-->
+    <mat-grid-tile [colspan]="1" [rowspan]="1">
+      <app-mini-card [title]="'DESPESES TOTALS'" [value]="totalExpenses.data[0].total" [sumary]="'Despeses totals associades al manteniment correctiu'"> </app-mini-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]="1" [rowspan]="1">
+      <app-mini-card [title]="'ÚLTIMS TRES MESOS'" [value]="totalExpensesLastMonth.data[0].total" [sumary]="'Despesa total els últims tres mesos'"> </app-mini-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]="1" [rowspan]="1">
+      <app-mini-card [title]="'ELEMENT MÉS INTERVINGUT'" [value]="elementMostProblematic.data[0].total" [sumary]="'Element amb més accions de manteniment realitzades'"> </app-mini-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]="1" [rowspan]="1">
+      <app-mini-card [title]="'ELEMENT MÉS CAR'" [value]="elementMostCheaper.data[0].total" [sumary]="'Element amb major inversió '"> </app-mini-card>
+    </mat-grid-tile>
+
+
+    <mat-grid-tile [colspan]="4" [rowspan]="4">
+      <app-card title="Llistat d'intervencions del Manteniment Correctiu">
+        <p> El següent llistat mostra totes les intervencions que s'han realitzat en el marc del Manteniment Correctiu. </p>
+        <app-orders-table></app-orders-table>
+      </app-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]="2" [rowspan]="3">
+      <app-card title="Monthly Revenue">
+          <h1> Despesa Total per Any</h1>
+          <app-cor-mai-year-grup></app-cor-mai-year-grup>
+      </app-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]="2" [rowspan]="3">
+      <app-card title="Monthly Revenue">
+          <h1> Intervencions Per Any</h1>
+          <app-inter-by-year></app-inter-by-year>
+      </app-card>
+    </mat-grid-tile>
+
+  </mat-grid-list>
+
+  
+</div>

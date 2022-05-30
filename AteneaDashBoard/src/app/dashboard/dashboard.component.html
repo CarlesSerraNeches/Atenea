@@ -1,0 +1,46 @@
+<!--dash.component.html-->
+<div class="grid-container">
+  <h1 class="mat-h1">Dashboard</h1>
+
+  <mat-grid-list cols="2" rowHeight="200px">
+    <mat-grid-list cols="2" rowHeight="200px">
+      <mat-grid-tile [colspan]="2" [rowspan]="2">
+        <app-card title="Informació">
+            <h1>Benvingut: Carles Serra Neches</h1> 
+            <h2>Actiu: Universitat d'Andorra</h2>
+            <h3>Plaça de la Germandat, 7 </h3>
+        </app-card>
+      </mat-grid-tile>
+    </mat-grid-list>
+    <!--Charts -->
+    <mat-grid-list cols="2" rowHeight="200px">
+      <mat-grid-tile [colspan]="1" [rowspan]="3">
+        <app-card title="Monthly Revenue">
+            <h1> Despesa Total per Any</h1>
+            <app-total-expenses-by-group></app-total-expenses-by-group>
+        </app-card>
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]="1" [rowspan]="3">
+        <app-card title="Product Sales">
+            <h1> Despesa Total per Any</h1>
+            <app-total-expenses-by-year></app-total-expenses-by-year>
+        </app-card>
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]="1" [rowspan]="3">
+      <app-card title="Monthly Revenue">
+          <h1> Despesa total del Grup/Any</h1>
+          <app-expenses-sub-grup></app-expenses-sub-grup>
+      </app-card>
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]="1" [rowspan]="3">
+          <app-card title="Product Sales">
+              <app-total-expenses-by-year></app-total-expenses-by-year>
+          </app-card>
+      </mat-grid-tile>
+    </mat-grid-list>
+    <!--Table-
+    <mat-grid-tile [colspan]="( cardLayout | async )?.table.cols" [rowspan]="( cardLayout | async )?.table.rows">
+      <app-card title="Card 9"><div>Table Content Here</div></app-card>
+    </mat-grid-tile> -->
+  </mat-grid-list>
+ </div>
